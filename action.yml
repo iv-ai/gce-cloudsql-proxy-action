@@ -1,13 +1,13 @@
-name: "Google Cloud SQL Proxy"
-description: "Start Google CloudSQL Proxy"
+name: "GCP SQL Proxy"
+description: "Google CloudSQL Proxy action accepting base64 encoded service account JSON string"
 
 branding:
   icon: "database"
-  color: "red"
+  color: "green"
 
 inputs:
   creds:
-    description: "Contents of a Service Account JSON Key"
+    description: "Contents of a Service Account JSON Key (base64 encoded)"
     required: true
   instance:
     description: "CloudSQL instance"
