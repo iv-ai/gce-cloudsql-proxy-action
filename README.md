@@ -14,7 +14,7 @@ or use a tool like [Terraform](https://www.terraform.io).
 
 | Variable                         | Description                                                                 |
 |----------------------------------|-----------------------------------------------------------------------------|
-| `creds`                          | ***Required*** Service Account JSON Key (base64 encoded)                |
+| `creds`                          | ***Required*** Service Account JSON Key **(base64 encoded)**                |
 | `instance`                       | ***Required*** Cloud SQL connection name                                    |
 | `port`                           | Listen on port, default 5432                                                |
 | `proxy_version`                  | Cloud SQL Proxy version, default 1.21.0                                     |
@@ -22,12 +22,12 @@ or use a tool like [Terraform](https://www.terraform.io).
 ## Example Usage
 
 ```
-uses: mattes/gce-cloudsql-proxy-action@v1
+uses: brettski/gce-cloudsql-proxy-action@v2
 with:
-  creds: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+  creds: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_B64 }}
   instance: my-project:us-central1:instance-1
 ```
 
 ## Brett's Fork
 
-This fork was created to allow a base64 Service Account key to be passed in. Most all GCP actions use base64 encoded strings, I am not sure why this one went the other way.
+This fork was created to allow a base64 Service Account key to be passed in.
