@@ -22,7 +22,7 @@ or use a tool like [Terraform](https://www.terraform.io).
 ## Example Usage
 
 ```
-uses: brettski/gce-cloudsql-proxy-action@v2
+uses: iv-ai/gce-cloudsql-proxy-action@v2
 with:
   creds: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_B64 }}
   instance: my-project:us-central1:instance-1
